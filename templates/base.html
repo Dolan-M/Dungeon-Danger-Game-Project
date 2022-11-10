@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Dungeon Danger - {{ page }}</title>
+        <link rel="icon" href="{{ url_for('static', filename='swords.ico') }}" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='ca2styles.css') }}" />
+        <script src="../static/game.js" type="module"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('game') }}">Play Game</a></li>
+                    <li><a href="{{ url_for('leaderboard') }}">Leaderboard</a></li>
+                    <li><a href="{{ url_for('rate') }}">Rate Game</a></li>
+                    {% if g.user %}
+                    <li><a class="logout" href="{{ url_for('logout') }}">Logout</a></li>
+                    {% else %}
+                    <li><a class="register" href="{{ url_for('register') }}">Register</a></li>
+                    <li><a class="login" href="{{ url_for('login') }}">Login</a></li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+            {% block main_content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <p>
+                <small>&copy; Dolan</small>
+            </p>
+            <p>
+                <small>All audio taken from <a href="https://www.zapsplat.com">https://www.zapsplat.com</a></small>
+            </p>
+            <p> <small>Character sprites taken from <a href="https://untamed.wild-refuge.net/rmxpresources.php?characters">https://untamed.wild-refuge.net/rmxpresources.php?characters</a></small></p>
+        </footer>
+    </body>
+</html>

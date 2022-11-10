@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+    <h1>Leaderboard</h1>
+    <p>Logged in as: {{g.user}}.</p>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Score</th>
+        </tr>
+        {% if leaderboard %}
+            {% for user in leaderboard %}
+                <tr>
+                    <td>{{ user["user_id"] }}</td>
+                    <td>{{ user["score"] }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+
+{% endblock %}

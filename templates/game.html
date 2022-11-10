@@ -1,0 +1,21 @@
+<!--Sound effects obtained from https://www.zapsplat.com-->
+
+
+{% extends "base.html" %}
+
+{% block main_content %}
+<p> <span id="health"></span> </p>
+<canvas width="512" height="320"></canvas>
+<p id="outcome"></p>
+<audio id="wall">
+    <source src="../static/zapsplat_human_body_fall_hard_thud_001_32044.mp3">
+</audio>
+<audio id="hit">
+    <source src="../static/noisecreations_NC_SFX_FistPunch-Vocal_03.mp3">
+</audio>
+<audio id="shoot">
+    <source src="../static/zapsplat_sound_design_whoosh_flames_fire_cinematic_002_62041.mp3">
+</audio>
+<p> <span id="score"></span> </p>
+<p> <span id="count"></span> </p>
+{% endblock %}

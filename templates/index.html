@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<h1>Dungeon Danger</h1>
+{% if g.user %}
+    <p>Logged in as: {{g.user}}.</p>
+{% endif %}
+<p>Today's date: {{ current_date }} </p>
+<section>
+    <h2>Controls</h2>
+    <table>
+        <tr>
+            <th>Key</th>
+            <th>Control</th>
+        </tr>
+        <tr>
+            <td>W or ArrowUp</td>
+            <td>Move Up</td>
+        </tr>
+        <tr>
+            <td>A or ArrowLeft</td>
+            <td>Move Left</td>
+        </tr>
+        <tr>
+            <td>S or ArrowDown</td>
+            <td>Move Down</td>
+        </tr>
+        <tr>
+            <td>D or ArrowRight</td>
+            <td>Move Right</td>
+        </tr>
+        <tr>
+            <td>Enter or Spacebar</td>
+            <td>Shoots a fireball in the direction of where the player is facing</td>
+        </tr>
+    </table>
+</section>
+{% endblock %}

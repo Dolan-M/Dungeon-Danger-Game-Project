@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+
+    <h1>Rate</h1>
+    <p>Logged in as: {{g.user}}</p>
+    <form action="" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.rate.label }}
+        {{ form.rate() }}
+        {% for error in form.rate.errors %}
+            {{ error }}
+        {% endfor %}
+        <br />
+        {{ form.submit() }}
+    </form>
+{% endblock %}

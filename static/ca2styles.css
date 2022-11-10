@@ -1,0 +1,98 @@
+* {
+    font-family:Century Gothic,CenturyGothic,AppleGothic,sans-serif; 
+}
+
+body {
+    background-color: rgb(180, 155, 194);
+}
+
+a:link, a:visited {
+    color: whitesmoke;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    padding: 70px 0;
+    text-align: center;
+}
+
+#outcome {
+    position: absolute;
+    top: 160px;
+    right: 490px;
+}
+
+canvas {
+    background-color: black;
+    display: block;
+    margin: 1em auto;
+    border-radius: 7px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%;
+    border: 2px solid rgb(113,95,124);
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+th {
+    background-color: rgb(113,95,124);
+    color: whitesmoke;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid rgb(113,95,124);
+}
+
+tr:hover {
+    background-color: whitesmoke;
+}
+
+#outcome {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 4em;
+}
+
+nav {
+    background-color: rgb(113,95,124);
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 15px 18px;
+    font-size: 18px;
+}
+
+.register, .login, .logout {
+    float: right;
+}
+
+label {
+    width: 5em;
+    clear: left;
+    margin-right: 1em;
+}
+    
+input, select {
+    margin-bottom: 1em;
+}
